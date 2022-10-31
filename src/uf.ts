@@ -24,7 +24,7 @@ export async function getUF(): Promise<number> {
     }
     catch (ex) {
         console.log(ex);
-        throw ex;
+        return -1;
     }
 }
 
