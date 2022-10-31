@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-scrap-uf-aws-lambda",
+  "version": "1.0.0",
+  "description": "Lambda service to scrap the Unidad de Fomento (UF) from the website of the Central Bank of Chile",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veglos/nodejs-scrap-uf-aws-lambda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veglos/nodejs-scrap-uf-aws-lambda/issues"
+  },
+  "homepage": "https://github.com/veglos/nodejs-scrap-uf-aws-lambda#readme",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.108",
+    "@types/cheerio": "^0.22.31",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "axios": "^1.1.3",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  nodejs-scrap-uf-aws-lambda:
+    build: .
+    ports:
+      - "9000:8080"
