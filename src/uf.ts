@@ -10,16 +10,22 @@ let refreshCacheTime: Date = new Date();
 
 export async function getUF(): Promise<number> {
 
-    if (refreshCache()) {
-        const response = await AxiosInstance.get(url);
-        const html = response.data;
-        const uf = scrapUFValue(html);
-        console.log('### fresh ###');
-        cachedUF = uf;
-    }
+    try {
+        if (refreshCache()) {
+            const response = await AxiosInstance.get(url);
+            const html = response.data;
+            const uf = scrapUFValue(html);
+            console.log('### fresh ###');
+            cachedUF = uf;
+        }
 
-    console.log('### cached ###');
-    return cachedUF;
+        console.log('### cached ###');
+        return cachedUF;
+    }
+    catch (ex) {
+        console.log(ex);
+        throw ex;
+    }
 }
 
 function refreshCache(): boolean {
